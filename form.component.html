@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FitnessTracker</title>
+  
+</head>
+
+
+<body>
+
+
+   
+  <nav class=" navbar  navbar-dark fixed-top scrolling-navbar "> 
+    <ul class="navbar-nav nav-flex-icons ">
+      <li class="menu__item"><a [routerLink]="['/landing']" class="menu__link active">
+        <span>
+          <i class="fas fa-home"></i>
+          
+        </span>
+        Home</a></li>
+       <li class="menu__item"><a [routerLink]="['/form']" class="menu__link">
+         <span>
+        <i class="fas fa-info-circle"></i>
+         </span>
+         Place Appointment</a></li>
+         <li class="menu__item"><a [routerLink]="['/view']" class="menu__link">
+          <span>
+         <i class="fas fa-info-circle"></i>
+          </span>
+          View Appointment</a></li>
+       <li class="menu__item"><a [routerLink]="['/contact']" class="menu__link">
+         <span>
+         <i class="fas fa-phone-volume"></i>
+        </span>
+         Contact us</a></li>
+    </ul>
+    <strong><img src="assets/logo.png" height="100" width="100" class="d-inline-block align-top" alt=""></strong>
+  </nav>
+  <div class="sidenav">
+    <ul class=" navbar-nav nav-flex-icons ml-auto">
+    <li class="menu__item"><a [routerLink]="['/landing']" class="menu__link active">
+      <span>
+        <i class="fas fa-home"></i>
+        
+      </span>
+      Home</a></li>
+     <li class="menu__item"><a [routerLink]="['/form']" class="menu__link">
+       <span>
+      <i class="fas fa-info-circle"></i>
+       </span>
+       Place Appointment</a></li>
+       <li class="menu__item"><a [routerLink]="['/view']" class="menu__link">
+        <span>
+       <i class="fas fa-info-circle"></i>
+        </span>
+        View Appointment</a></li>
+     <li class="menu__item"><a [routerLink]="['/contact']" class="menu__link">
+       <span>
+       <i class="fas fa-phone-volume"></i>
+      </span>
+       Contact us</a></li>
+  </ul>
+  </div>
+  
+    <section class="view intro-2 ">
+      <div class="ml-5 mt-5 col-lg-9 offset-lg-3 col-sm-5 offset-sm-0">
+      
+          
+          <!-- Material form register -->
+          
+           <div class="card">
+              <div class="row justify-content-center">
+                
+                
+    <form action="index2.html" [formGroup]="testform" >
+        <div id="div11">
+        
+                                <h4 id="id1"><label>Name: </label>
+                                 <input id="name1" formControlName= "fname"   type="text" maxlength="32" name="firstname"  placeholder="firstname"  required>
+                                <input id="name2"  type="text" maxlength="32"  name="lastname" placeholder="lastname" required>
+                                    </h4>
+                                    <br>
+                              
+                            
+                              
+                                     <!-- <input type="number" name="age" min="12" max="120"> -->
+                                <label >Age:</label>
+                                <select class="Age" id="select1" name="age" >
+                                 <option>12</option><option>13</option><option>14</option><option>15</option>
+                                <option>16</option><option>17</option><option>18</option><option>19</option>
+                                <option>20</option><option>21</option><option>22</option><option>23</option>
+                                <option>24</option><option>25</option><option>26</option><option>27</option>
+                                <option>28</option><option>29</option><option>30</option><option>31</option>
+                                <option>32</option><option>33</option><option>34</option><option>35</option>
+                                <option>36</option><option>37</option><option>38</option><option>39</option>
+                                <option>40</option><option>41</option><option>42</option><option>43</option>
+                                <option>44</option><option>45</option><option>46</option><option>47</option>
+                                <option>48</option><option>49</option><option>50</option><option>51</option>
+                                <option>52</option><option>53</option><option>54</option><option>55</option>
+                                <option>56</option><option>57</option><option>58</option><option>59</option>
+                                <option>60</option><option>61</option><option>62</option><option>63</option>
+                                <option>64</option><option>65</option><option>66</option><option>67</option>
+                                <option>68</option><option>69</option><option>70</option><option>71</option>
+                                <option>72</option><option>73</option><option>74</option><option>75</option>
+                                <option>76</option><option>77</option><option>78</option><option>79</option>
+                                <option>80</option><option>81</option><option>82</option><option>83</option>
+                                <option>84</option><option>85</option><option>86</option><option>87</option>
+                                <option>88</option><option>89</option><option>90</option>
+                                </select>
+                                 <label >Email:</label>
+                                 <input class="Age" type="email" name="email" placeholder="email" maxlength="50"  
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required >
+                                
+                                <span>
+                                    <label>
+                                        phone:-
+                                    </label>
+                                    <select>
+                                        <option aria-placeholder="select country code">+91</option>
+                                    </select>
+                                    <span >
+                                        <input  style="color: black;"id="codeBox1" formControlName="p1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)"/>
+                                        <input  style="color: black;"width:50px id="codeBox2" formControlName="p2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)"/>
+                                        <input  style="color: black;"id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)"/>
+                                        <input  style="color: black;"id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)"/>
+                                        <input  style="color: black;"id="codeBox5" type="number" maxlength="1" onkeyup="onKeyUpEvent(5, event)" onfocus="onFocusEvent(5)"/>
+                                        <input  style="color: black;"id="codeBox6" type="number" maxlength="1" onkeyup="onKeyUpEvent(6, event)" onfocus="onFocusEvent(6)"/>
+                                        <input  style="color: black;"id="codeBox7" type="number" maxlength="1" onkeyup="onKeyUpEvent(7, event)" onfocus="onFocusEvent(7)"/>
+                                        <input  style="color: black;"id="codeBox8" type="number" maxlength="1" onkeyup="onKeyUpEvent(8, event)" onfocus="onFocusEvent(8)"/>
+                                        <input  style="color: black;"id="codeBox9" type="number" maxlength="1" onkeyup="onKeyUpEvent(9, event)" onfocus="onFocusEvent(9)"/>
+                                        <input  style="color: black;"id="codeBox10" type="number" maxlength="1" onkeyup="onKeyUpEvent(10, event)" onfocus="onFocusEvent(10)"/>  
+                                </span>
+                                </span>
+                            
+                                
+                              <br>
+                              
+                              <div id="add1">
+                              <h4><label>Address:</label></h4>
+                              
+                              <label>Street Address: </label>
+                              <input id="street" formControlName="address" type="text" maxlength="100" required >
+                              <br>
+                              <br>
+                              <label>City: </label>
+                              <input id="city" formControlName="pcity" type="text" maxlength="40" required="" >
+                                <label>State: </label>
+                              <input id="State" type="text" maxlength="40" >
+                                <label>Country: </label>
+                              
+                              <select id="country" name="country" required>
+                               <option value="Afganistan">Afghanistan</option>
+                               <option value="Albania">Albania</option>
+                               <option value="Algeria">Algeria</option>
+                               <option value="American Samoa">American Samoa</option>
+                               <option value="Andorra">Andorra</option>
+                               <option value="Angola">Angola</option>
+                               <option value="Anguilla">Anguilla</option>
+                               <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                               <option value="Argentina">Argentina</option>
+                               <option value="Armenia">Armenia</option>
+                               <option value="Aruba">Aruba</option>
+                               <option value="Australia">Australia</option>
+                               <option value="Austria">Austria</option>
+                               <option value="Azerbaijan">Azerbaijan</option>
+                               <option value="Bahamas">Bahamas</option>
+                               <option value="Bahrain">Bahrain</option>
+                               <option value="Bangladesh">Bangladesh</option>
+                               <option value="Barbados">Barbados</option>
+                               <option value="Belarus">Belarus</option>
+                               <option value="Belgium">Belgium</option>
+                               <option value="Belize">Belize</option>
+                               <option value="Benin">Benin</option>
+                               <option value="Bermuda">Bermuda</option>
+                               <option value="Bhutan">Bhutan</option>
+                               <option value="Bolivia">Bolivia</option>
+                               <option value="Bonaire">Bonaire</option>
+                               <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                               <option value="Botswana">Botswana</option>
+                               <option value="Brazil">Brazil</option>
+                               <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                               <option value="Brunei">Brunei</option>
+                               <option value="Bulgaria">Bulgaria</option>
+                               <option value="Burkina Faso">Burkina Faso</option>
+                               <option value="Burundi">Burundi</option>
+                               <option value="Cambodia">Cambodia</option>
+                               <option value="Cameroon">Cameroon</option>
+                               <option value="Canada">Canada</option>
+                               <option value="Canary Islands">Canary Islands</option>
+                               <option value="Cape Verde">Cape Verde</option>
+                               <option value="Cayman Islands">Cayman Islands</option>
+                               <option value="Central African Republic">Central African Republic</option>
+                               <option value="Chad">Chad</option>
+                               <option value="Channel Islands">Channel Islands</option>
+                               <option value="Chile">Chile</option>
+                               <option value="China">China</option>
+                               <option value="Christmas Island">Christmas Island</option>
+                               <option value="Cocos Island">Cocos Island</option>
+                               <option value="Colombia">Colombia</option>
+                               <option value="Comoros">Comoros</option>
+                               <option value="Congo">Congo</option>
+                               <option value="Cook Islands">Cook Islands</option>
+                               <option value="Costa Rica">Costa Rica</option>
+                               <option value="Cote DIvoire">Cote DIvoire</option>
+                               <option value="Croatia">Croatia</option>
+                               <option value="Cuba">Cuba</option>
+                               <option value="Curaco">Curacao</option>
+                               <option value="Cyprus">Cyprus</option>
+                               <option value="Czech Republic">Czech Republic</option>
+                               <option value="Denmark">Denmark</option>
+                               <option value="Djibouti">Djibouti</option>
+                               <option value="Dominica">Dominica</option>
+                               <option value="Dominican Republic">Dominican Republic</option>
+                               <option value="East Timor">East Timor</option>
+                               <option value="Ecuador">Ecuador</option>
+                               <option value="Egypt">Egypt</option>
+                               <option value="El Salvador">El Salvador</option>
+                               <option value="Equatorial Guinea">Equatorial Guinea</option>
+                               <option value="Eritrea">Eritrea</option>
+                               <option value="Estonia">Estonia</option>
+                               <option value="Ethiopia">Ethiopia</option>
+                               <option value="Falkland Islands">Falkland Islands</option>
+                               <option value="Faroe Islands">Faroe Islands</option>
+                               <option value="Fiji">Fiji</option>
+                               <option value="Finland">Finland</option>
+                               <option value="France">France</option>
+                               <option value="French Guiana">French Guiana</option>
+                               <option value="French Polynesia">French Polynesia</option>
+                               <option value="French Southern Ter">French Southern Ter</option>
+                               <option value="Gabon">Gabon</option>
+                               <option value="Gambia">Gambia</option>
+                               <option value="Georgia">Georgia</option>
+                               <option value="Germany">Germany</option>
+                               <option value="Ghana">Ghana</option>
+                               <option value="Gibraltar">Gibraltar</option>
+                               <option value="Great Britain">Great Britain</option>
+                               <option value="Greece">Greece</option>
+                               <option value="Greenland">Greenland</option>
+                               <option value="Grenada">Grenada</option>
+                               <option value="Guadeloupe">Guadeloupe</option>
+                               <option value="Guam">Guam</option>
+                               <option value="Guatemala">Guatemala</option>
+                               <option value="Guinea">Guinea</option>
+                               <option value="Guyana">Guyana</option>
+                               <option value="Haiti">Haiti</option>
+                               <option value="Hawaii">Hawaii</option>
+                               <option value="Honduras">Honduras</option>
+                               <option value="Hong Kong">Hong Kong</option>
+                               <option value="Hungary">Hungary</option>
+                               <option value="Iceland">Iceland</option>
+                               <option value="Indonesia">Indonesia</option>
+                               <option value="India">India</option>
+                               <option value="Iran">Iran</option>
+                               <option value="Iraq">Iraq</option>
+                               <option value="Ireland">Ireland</option>
+                               <option value="Isle of Man">Isle of Man</option>
+                               <option value="Israel">Israel</option>
+                               <option value="Italy">Italy</option>
+                               <option value="Jamaica">Jamaica</option>
+                               <option value="Japan">Japan</option>
+                               <option value="Jordan">Jordan</option>
+                               <option value="Kazakhstan">Kazakhstan</option>
+                               <option value="Kenya">Kenya</option>
+                               <option value="Kiribati">Kiribati</option>
+                               <option value="Korea North">Korea North</option>
+                               <option value="Korea Sout">Korea South</option>
+                               <option value="Kuwait">Kuwait</option>
+                               <option value="Kyrgyzstan">Kyrgyzstan</option>
+                               <option value="Laos">Laos</option>
+                               <option value="Latvia">Latvia</option>
+                               <option value="Lebanon">Lebanon</option>
+                               <option value="Lesotho">Lesotho</option>
+                               <option value="Liberia">Liberia</option>
+                               <option value="Libya">Libya</option>
+                               <option value="Liechtenstein">Liechtenstein</option>
+                               <option value="Lithuania">Lithuania</option>
+                               <option value="Luxembourg">Luxembourg</option>
+                               <option value="Macau">Macau</option>
+                               <option value="Macedonia">Macedonia</option>
+                               <option value="Madagascar">Madagascar</option>
+                               <option value="Malaysia">Malaysia</option>
+                               <option value="Malawi">Malawi</option>
+                               <option value="Maldives">Maldives</option>
+                               <option value="Mali">Mali</option>
+                               <option value="Malta">Malta</option>
+                               <option value="Marshall Islands">Marshall Islands</option>
+                               <option value="Martinique">Martinique</option>
+                               <option value="Mauritania">Mauritania</option>
+                               <option value="Mauritius">Mauritius</option>
+                               <option value="Mayotte">Mayotte</option>
+                               <option value="Mexico">Mexico</option>
+                               <option value="Midway Islands">Midway Islands</option>
+                               <option value="Moldova">Moldova</option>
+                               <option value="Monaco">Monaco</option>
+                               <option value="Mongolia">Mongolia</option>
+                               <option value="Montserrat">Montserrat</option>
+                               <option value="Morocco">Morocco</option>
+                               <option value="Mozambique">Mozambique</option>
+                               <option value="Myanmar">Myanmar</option>
+                               <option value="Nambia">Nambia</option>
+                               <option value="Nauru">Nauru</option>
+                               <option value="Nepal">Nepal</option>
+                               <option value="Netherland Antilles">Netherland Antilles</option>
+                               <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                               <option value="Nevis">Nevis</option>
+                               <option value="New Caledonia">New Caledonia</option>
+                               <option value="New Zealand">New Zealand</option>
+                               <option value="Nicaragua">Nicaragua</option>
+                               <option value="Niger">Niger</option>
+                               <option value="Nigeria">Nigeria</option>
+                               <option value="Niue">Niue</option>
+                               <option value="Norfolk Island">Norfolk Island</option>
+                               <option value="Norway">Norway</option>
+                               <option value="Oman">Oman</option>
+                               <option value="Pakistan">Pakistan</option>
+                               <option value="Palau Island">Palau Island</option>
+                               <option value="Palestine">Palestine</option>
+                               <option value="Panama">Panama</option>
+                               <option value="Papua New Guinea">Papua New Guinea</option>
+                               <option value="Paraguay">Paraguay</option>
+                               <option value="Peru">Peru</option>
+                               <option value="Phillipines">Philippines</option>
+                               <option value="Pitcairn Island">Pitcairn Island</option>
+                               <option value="Poland">Poland</option>
+                               <option value="Portugal">Portugal</option>
+                               <option value="Puerto Rico">Puerto Rico</option>
+                               <option value="Qatar">Qatar</option>
+                               <option value="Republic of Montenegro">Republic of Montenegro</option>
+                               <option value="Republic of Serbia">Republic of Serbia</option>
+                               <option value="Reunion">Reunion</option>
+                               <option value="Romania">Romania</option>
+                               <option value="Russia">Russia</option>
+                               <option value="Rwanda">Rwanda</option>
+                               <option value="St Barthelemy">St Barthelemy</option>
+                               <option value="St Eustatius">St Eustatius</option>
+                               <option value="St Helena">St Helena</option>
+                               <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                               <option value="St Lucia">St Lucia</option>
+                               <option value="St Maarten">St Maarten</option>
+                               <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                               <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                               <option value="Saipan">Saipan</option>
+                               <option value="Samoa">Samoa</option>
+                               <option value="Samoa American">Samoa American</option>
+                               <option value="San Marino">San Marino</option>
+                               <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                               <option value="Saudi Arabia">Saudi Arabia</option>
+                               <option value="Senegal">Senegal</option>
+                               <option value="Seychelles">Seychelles</option>
+                               <option value="Sierra Leone">Sierra Leone</option>
+                               <option value="Singapore">Singapore</option>
+                               <option value="Slovakia">Slovakia</option>
+                               <option value="Slovenia">Slovenia</option>
+                               <option value="Solomon Islands">Solomon Islands</option>
+                               <option value="Somalia">Somalia</option>
+                               <option value="South Africa">South Africa</option>
+                               <option value="Spain">Spain</option>
+                               <option value="Sri Lanka">Sri Lanka</option>
+                               <option value="Sudan">Sudan</option>
+                               <option value="Suriname">Suriname</option>
+                               <option value="Swaziland">Swaziland</option>
+                               <option value="Sweden">Sweden</option>
+                               <option value="Switzerland">Switzerland</option>
+                               <option value="Syria">Syria</option>
+                               <option value="Tahiti">Tahiti</option>
+                               <option value="Taiwan">Taiwan</option>
+                               <option value="Tajikistan">Tajikistan</option>
+                               <option value="Tanzania">Tanzania</option>
+                               <option value="Thailand">Thailand</option>
+                               <option value="Togo">Togo</option>
+                               <option value="Tokelau">Tokelau</option>
+                               <option value="Tonga">Tonga</option>
+                               <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                               <option value="Tunisia">Tunisia</option>
+                               <option value="Turkey">Turkey</option>
+                               <option value="Turkmenistan">Turkmenistan</option>
+                               <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                               <option value="Tuvalu">Tuvalu</option>
+                               <option value="Uganda">Uganda</option>
+                               <option value="United Kingdom">United Kingdom</option>
+                               <option value="Ukraine">Ukraine</option>
+                               <option value="United Arab Erimates">United Arab Emirates</option>
+                               <option value="United States of America">United States of America</option>
+                               <option value="Uraguay">Uruguay</option>
+                               <option value="Uzbekistan">Uzbekistan</option>
+                               <option value="Vanuatu">Vanuatu</option>
+                               <option value="Vatican City State">Vatican City State</option>
+                               <option value="Venezuela">Venezuela</option>
+                               <option value="Vietnam">Vietnam</option>
+                               <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                               <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                               <option value="Wake Island">Wake Island</option>
+                               <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                               <option value="Yemen">Yemen</option>
+                               <option value="Zaire">Zaire</option>
+                               <option value="Zambia">Zambia</option>
+                               <option value="Zimbabwe">Zimbabwe</option>
+                            </select>
+                            <br>
+                            <br>
+                            <label>Pincode:</label>
+                            <input type="text" name="number" required>
+                                    
+                              </div>
+                             
+                              <br>
+                             <br>
+                             <label class="Age">Trainer's Preference:</label>
+                             <br>
+                             
+                             
+                              <input type="radio" name="package" formControlName="train" id="myRadio" value="Male"><label>Male Preference</label><br>
+                              <input type="radio" name="package" formControlName="train" id="myRadio" value="Female"><label>Female Preference</label><br>
+                              <input type="radio" name="package" formControlName="train" id="myRadio" value="NoPre"><label>No Preference</label><br>
+                              <input type="radio" name="package" formControlName="train" id="myRadio" value="other1" > <label>Trainer's Name</label>
+                              <input style="display:none;" type="text" name="otherAnswer1" id="otherAnswer1"/><br>
+                              <input type="radio" name="package" formControlName="train" id="myRadio" value="other" > <label>other</label>
+                              <input style="display:none;" type="text" name="otherAnswer" id="otherAnswer"/><br>
+                              <p id="demo"></p>
+                          
+                            <br>
+                                <label class="Age">Do you need Physiotherepist?</label>
+                                <br>
+                                <input type="radio" name="package" value="Yes"><label>Yes</label>
+                                <input type="radio" name="package" value="No"><label>No</label>
+        
+                                <br>
+                                <br>
+        
+        
+                              <div class="table">
+                                  
+                                  <h4><label>Appointment (Free):</label></h4>
+                                  <br>
+                            <table>
+                            <tr>
+                               <th><label>DAY</label></th>
+                                <th><label>7 to 9 am</label></th>
+                                <th><label>9 to 11 am </label></th>
+                                <th><label>11 to 1 pm</label></th>
+                              <th><label>1 to 3 pm</label></th>
+                              <th><label>3 to 5 pm</label></th>
+                            </tr>
+                            <tr>
+                                <td><label>Monday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Tuesday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Wednesday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Thursday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Friday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Saturday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Sunday</label></td>
+                                <td><input type="radio" name="row-1" data-col="7 to 9 am"></td>
+                                <td><input type="radio" name="row-1" data-col="9 to 11 am"></td>
+                                <td><input type="radio" name="row-1" data-col="11 to 1 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="1 to 3 pm"></td>
+                              <td><input type="radio" name="row-1" data-col="3 to 5 pm"></td>
+                            </tr>
+                            </table>
+                            </div>
+                            <br>
+        
+        
+        
+                            <h4><label>Select a package:</label></h4>
+                            <input type="radio" formControlName="pack" name="package6" id="myRadio1" value="400"> <label>One time assesment only(INR 500)</label><br>
+  <input type="radio" formControlName="pack" name="package6" id="myRadio1" value="1,600"><label>Four weekly sessions(INR 400/session)</label><br>
+  <input type="radio" formControlName="pack" name="package6" id="myRadio1" value="3,600"><label>Twelve weekly sessions(INR 300/session)</label><br>
+   <input type="radio" name="package6" id="myRadio1" value="other2" ><label>other</label>
+  <input style="display:none;" formControlName="pack" type="text" name="otherAnswer2" id="otherAnswer2"/>
+  <p id="demo9"></p><br>
+
+  <h4><label>Select a package:</label></h4>
+  <input id="p1" onclick="ShowPrice()" type="radio" name="pac" value="500"><label> One time assesment only(INR 500)</label><br>
+  <input id="p2" onclick="ShowPrice()" type="radio" name="pac" value="1,600"><label>Four weekly sessions(INR 400/session)</label><br>
+  <input id="p3"  onclick="ShowPrice()" type="radio" name="pac" value="3,600"><label>Twelve weekly sessions(INR 300/session)</label><br>
+  <input id="any" onclick="ShowPrice()" type="radio" name="pac" value="2000"><label> Other :</label>
+  <input id="p4" onclick="ShowPrice()" type="text" size="40" placeholder="No of sessions">
+
+  <br>
+  <br>
+<h4><label>Quote:</label></h4>
+<input id="r" type="text" placeholder="INR "  maxlength="12">:
+<input id="q2" type="text" placeholder=" Paisa " maxlength="12">
+<br>
+
+
+
+
+      <button type="submit" (click)="Submit(testform)" class="btn btn-success mt-4">Submit</button>
+
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <br>
+                                </div>
+                                </form>
+    
+
+                
+              </div>
+           </div>
+           
+          </div>
+    </section>
+   
+  
+  
+
+
+
+  
+</body>
+</html>
